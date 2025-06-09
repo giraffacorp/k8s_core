@@ -4,6 +4,7 @@ kind: Application
 metadata:
   name: core-apps
 spec:
+  project: default
   source:
     repoURL: https://github.com/giraffacorp/k8s_core.git
     targetRevision: HEAD
