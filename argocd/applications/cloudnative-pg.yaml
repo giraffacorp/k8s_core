@@ -7,17 +7,15 @@ spec:
   project: default
   sources:
     - repoURL: https://cloudnative-pg.github.io/charts
-      chart:
+      chart: cloudnative-pg
       targetRevision: 0.24.0
       helm:
         valueFiles:
           - $app/apps/cloudnative-pg/values.yaml
-    - repoURL: https://github.com/giraffacorp/k8s_beelink_infra.git
+    - repoURL: https://github.com/giraffacorp/k8s_core.git
       targetRevision: HEAD
       ref: app
       path: apps/cloudnative-pg
-      directory:
-        recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: cnpg-system
